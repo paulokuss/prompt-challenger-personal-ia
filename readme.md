@@ -10,34 +10,38 @@
 </a>
 </p>
 
-<p align="center">
-  <h3 align="center">🏋️‍♂️ Assistente de Personal Trainer - Gerador de Treino Ideal</h3>
-Este projeto é um desafio de Prompt Engineer, onde o objetivo é criar um prompt que ajuda a montar o treino ideal para cada combinação de fatores, como biotipo corporal, disponibilidade de tempo e tipo de exercícios preferidos. O assistente de personal trainer gerado por esse prompt será capaz de personalizar os treinos de acordo com as características e necessidades do usuário.
-O projeto deve ser feito utilizando as boas práticas de prompt engineer.
+<p align="justify">
+  <h3 align="center">🏋️‍♂️ Assistente de Calistenia - Gerador de Treino Ideal em Praças Públicas</h3>
+Este projeto é um desafio de Prompt Engineering avançado, onde o objetivo é criar um prompt que gera um plano de treino de calistenia personalizado para ser realizado em praças públicas. O assistente considerará o biotipo corporal, IMC, idade, gênero, disponibilidade de tempo, nível de condicionamento físico e equipamentos disponíveis em praças públicas para criar um programa de treino eficaz e adaptável. O projeto deve ser feito utilizando as boas práticas de prompt engineering.
 </p>
 
 ## 📋 Índice
 
-- [📋 Índice](#-índice)
 - [📝 Introdução](#-introdução)
 - [💪 Biotipos Corporais](#-biotipos-corporais)
-- [📅 Dias Disponíveis para Treino](#-dias-disponíveis-para-treino)
-- [🏋️ Tipos de Exercícios](#️-tipos-de-exercícios)
-- [🛠️ Regras de negócio](#️-regras-de-negócio)
+- [📊 Índice de Massa Corporal (IMC)](#-índice-de-massa-corporal-imc)
+- [🎂 Idade e Gênero](#-idade-e-gênero)
+- [📅 Disponibilidade para Treino](#-disponibilidade-para-treino)
+- [🏋️ Níveis de Condicionamento](#️-níveis-de-condicionamento)
+- [🛠️ Equipamentos em Praças Públicas](#️-equipamentos-em-praças-públicas)
+- [📊 Progressão de Exercícios](#-progressão-de-exercícios)
+- [🌡️ Adaptações Climáticas](#️-adaptações-climáticas)
+- [🥗 Dicas Nutricionais](#-dicas-nutricionais)
+- [🛠️ Regras de Negócio](#️-regras-de-negócio)
 - [📖 Material de Apoio](#-material-de-apoio)
 - [🎯 Prompt de Resposta Proposto](#-prompt-de-resposta-proposto)
 
----
-
 ## 📝 Introdução
 
-Este projeto visa criar um assistente de personal trainer automatizado que ajuda a gerar treinos personalizados. O usuário fornecerá informações como o biotipo corporal, a quantidade de dias disponíveis para treinar na semana e o tipo de exercício preferido, e o assistente gerará um plano de treino ideal com base nessas informações.
-
----
+<p align="justify">
+Este projeto visa criar um assistente de calistenia automatizado que gera treinos personalizados para serem realizados em praças públicas. O usuário fornecerá informações sobre seu biotipo corporal, IMC, idade, gênero, disponibilidade de tempo, nível de condicionamento físico e equipamentos disponíveis na praça pública de sua escolha. O assistente então criará um plano de treino ideal, considerando essas variáveis e as particularidades do treinamento ao ar livre.
+</p>
 
 ## 💪 Biotipos Corporais
 
+<p align="justify">
 A primeira regra para personalizar o treino é determinar o biotipo corporal do usuário. Existem três biotipos principais:
+</p>
 
 <table>
   <tr>
@@ -68,56 +72,140 @@ A primeira regra para personalizar o treino é determinar o biotipo corporal do 
   </tr>
 </table>
 
+<p align="justify">
 > **Nota:** Escolha o biotipo que mais se aproxima do seu corpo atual para que o treino seja mais eficiente.
+</p>
 
----
+## 📊 Índice de Massa Corporal (IMC)
 
-## 📅 Dias Disponíveis para Treino
+<p align="justify">
+O IMC é uma métrica importante para determinar a intensidade e o tipo de exercício adequado. Ele é calculado dividindo o peso (em kg) pela altura (em metros) ao quadrado.
+</p>
 
+| Categoria de IMC | Descrição                      |
+|------------------|--------------------------------|
+| Abaixo do peso   | IMC < 18,5                     |
+| Peso normal      | 18,5 ≤ IMC < 24,9              |
+| Sobrepeso        | 25 ≤ IMC < 29,9                |
+| Obesidade        | IMC ≥ 30                       |
+
+## 🎂 Idade e Gênero
+
+<p align="justify">
+A idade e o gênero influenciam na escolha dos exercícios e na intensidade do treino. O assistente ajustará o plano de acordo com as faixas etárias e considerações de gênero.
+</p>
+
+## 📅 Disponibilidade para Treino
+
+<p align="justify">
 A segunda regra é determinar quantos dias por semana o usuário tem disponível para treinar. Dependendo do número de dias, o treino sugerido pode variar:
+</p>
 
-| **Imagem**                                                     | **Dias por Semana** | **Tipo de Treino Sugerido** |
-| -------------------------------------------------------------- | ------------------- | --------------------------- |
-| <img src=".github/assets/calendar.png" width="50" height="50"> | 1 dia               | Treino Full Body            |
-| <img src=".github/assets/calendar.png" width="50" height="50"> | 3 dias              | Treino ABC                  |
-| <img src=".github/assets/calendar.png" width="50" height="50"> | 5 dias              | Treino ABCDE                |
+| **Imagem**                                                     | **Dias por Semana** | **Tipo de Treino Sugerido**                            |
+| -------------------------------------------------------------- | ------------------- | ------------------------------------------------------ |
+| <img src=".github/assets/calendar.png" width="50" height="50"> | 2-3 dias            | Treino de Corpo Inteiro                                |
+| <img src=".github/assets/calendar.png" width="50" height="50"> | 4-5 dias            | Divisão por Grupos Musculares (Push/Pull/Legs)         |
+| <img src=".github/assets/calendar.png" width="50" height="50"> | 6-7 dias            | Rotina Avançada com Dias de Especialização             |
 
-- **Full Body**: Treino que trabalha o corpo todo em uma única sessão.
-- **ABC**: Divisão do treino em três dias, cada um focado em grupos musculares diferentes.
-- **ABCDE**: Divisão do treino em cinco dias, com foco ainda mais específico em cada grupo muscular.
+## 🏋️ Níveis de Condicionamento
 
----
+| Nível           | Descrição                                           |
+|-----------------|-----------------------------------------------------|
+| Iniciante       | Pouca ou nenhuma experiência em calistenia           |
+| Intermediário   | Capaz de realizar exercícios básicos com boa forma   |
+| Avançado        | Domínio de movimentos complexos e variações          |
 
-## 🏋️ Tipos de Exercícios
+## 🛠️ Equipamentos em Praças Públicas
 
-A terceira regra envolve a escolha do tipo de exercício preferido. Aqui estão algumas categorias com exemplos:
+| Equipamento     | Exercícios Possíveis                                |
+|-----------------|-----------------------------------------------------|
+| Barras          | Pull-ups, Muscle-ups, Leg raises                    |
+| Paralelas       | Dips, L-sits, Handstand push-ups                    |
+| Bancos          | Step-ups, Decline push-ups, Bulgarian split squats  |
+| Escadas         | Subida de escadas, Mountain climbers                |
 
-| **Imagem**                                                       | **Tipo de Treino** | **Descrição**                                                                                                 |
-| ---------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------- |
-| <img src=".github/assets/dumbells.png" width="50%" height="50%"> | **Funcional**      | Exercícios que melhoram a funcionalidade do corpo, usando movimentos naturais.                                |
-| <img src=".github/assets/4760665.png" width="50%" height="50%">  | **Maquinário**     | Exercícios feitos em máquinas, com foco em isolar grupos musculares.                                          |
-| <img src=".github/assets/barr.png" width="50%" height="50%">     | **Peso Livre**     | Exercícios com pesos livres, como halteres e barras, para trabalhar vários grupos musculares simultaneamente. |
-| <img src=".github/assets/cardio.png" width="50%" height="50%">   | **Cardio**         | Exercícios voltados para melhorar a resistência cardiovascular, como corrida ou ciclismo.                     |
-| <img src=".github/assets/hiit.png" width="50%" height="50%">     | **HIIT**           | Treinos intervalados de alta intensidade, ótimos para queima de gordura.                                      |
+## 📊 Progressão de Exercícios
 
----
+| Exercício Base  | Progressões                                         |
+|-----------------|-----------------------------------------------------|
+| Push-up         | Inclinado → Padrão → Declinado → One-arm            |
+| Pull-up         | Negativas → Assistido → Padrão → Weighted → One-arm |
+| Squat           | Assisted → Bodyweight → Pistol → Weighted Pistol    |
 
-## 🛠️ Regras de negócio
+## 🌡️ Adaptações Climáticas
 
-1. **Identifique seu biotipo corporal** consultando a seção de biotipos.
-2. **Determine quantos dias por semana você pode treinar** e escolha o tipo de treino mais adequado.
-3. **Selecione o tipo de exercício** que prefere realizar e que se encaixa melhor nos seus objetivos.
-4. Use o prompt do assistente para gerar um plano de treino personalizado.
+<p align="justify">
+As condições climáticas podem afetar o desempenho e segurança durante os treinos. Aqui estão algumas adaptações sugeridas:
+</p>
 
----
+| Clima           | Adaptações Sugeridas                                |
+|-----------------|-----------------------------------------------------|
+| Calor Intenso   | Treinos mais curtos, foco em hidratação             |
+| Frio Extremo    | Aquecimento prolongado, camadas de roupa            |
+| Chuva Leve      | Exercícios sob áreas cobertas, grip training        |
+
+## 🥗 Dicas Nutricionais
+
+<p align="justify">
+A nutrição é um componente essencial para alcançar seus objetivos de fitness. Aqui estão algumas recomendações baseadas em diferentes objetivos:
+</p>
+
+| Objetivo        | Recomendações Nutricionais                          |
+|-----------------|-----------------------------------------------------|
+| Ganho Muscular  | Superávit calórico, foco em proteínas e carboidratos|
+| Perda de Gordura| Déficit calórico moderado, alta ingestão proteica   |
+| Manutenção      | Equilíbrio calórico, dieta balanceada               |
+
+## 🛠️ Regras de Negócio
+
+<p align="justify">
+Para garantir que o plano de treino seja eficaz e seguro, siga estas etapas:
+</p>
+
+1. Identifique seu biotipo corporal consultando a seção de biotipos.
+2. Calcule seu IMC e veja em qual categoria você se encaixa.
+3. Informe sua idade e gênero para ajustes personalizados.
+4. Determine quantos dias por semana você pode treinar e escolha o tipo de treino mais adequado.
+5. Identifique seu nível de condicionamento físico atual.
+6. Liste os equipamentos disponíveis na praça pública escolhida.
+7. Considere as condições climáticas típicas da sua região.
+8. Defina seu objetivo principal (ganho muscular, perda de gordura, etc.).
+9. Use o prompt do assistente para gerar um plano de treino personalizado.
 
 ## 📖 Material de Apoio
 
+<p align="justify">
 Aqui estão alguns recursos adicionais que podem ser úteis para entender melhor o projeto e as práticas de prompt engineering:
+</p>
 
 - [Fundamentos de Engenharia de prompt](https://elidianaandrade.gitbook.io/fundamentos-de-engenharia-de-prompts-com-claude-3)
 - [Boas práticas de prompt](https://aline-antunes.gitbook.io/otimize-seus-prompts-e-aprenda-mais-usando-ias-1)
-
----
+- [Guia Completo de Calistenia](https://www.calistenia.net/)
+- [Nutrição para Praticantes de Calistenia](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5872783/)
+- [Treinamento ao Ar Livre: Benefícios e Desafios](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3710158/)
 
 ## 🎯 Prompt de Resposta Proposto
+
+<p align="justify">
+Você é um Assistente de Calistenia especializado em criar planos de treino para serem realizados em praças públicas. Com base nas informações fornecidas pelo usuário, crie um plano de treino detalhado e personalizado seguindo estas diretrizes:
+</p>
+
+1. Cumprimente o usuário e peça as informações necessárias (biotipo, IMC, idade, gênero, disponibilidade, nível, equipamentos disponíveis, clima típico e objetivo).
+
+2. Analise as informações e crie um plano de treino semanal que inclua:
+   - Aquecimento específico para o ambiente externo
+   - Exercícios principais com progressões adequadas
+   - Variações para diferentes condições climáticas
+   - Dicas de segurança para treinar em espaços públicos
+
+3. Forneça um cronograma detalhado com sets, repetições e tempos de descanso.
+
+4. Inclua dicas nutricionais alinhadas com o objetivo do usuário.
+
+5. Ofereça sugestões para monitorar o progresso e ajustar o plano conforme necessário.
+
+6. Conclua com palavras de encorajamento e ofereça-se para esclarecer dúvidas ou fazer ajustes no plano.
+
+<p align="justify">
+Lembre-se de manter um tom profissional, motivador e educativo, enfatizando a importância da consistência e da técnica correta na prática da calistenia.
+</p>
